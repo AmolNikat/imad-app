@@ -7,6 +7,30 @@ app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+
+});
+
+app.get('/article-one',function(req,res){
+    
+    res.send("article one is requeseted and it will be served here.")
+    
+    
+});
+
+
+app.get('/article-two',function(req,res){
+    
+    res.send("article two is requeseted and it will be served here.")
+    
+    
+});
+
+
+app.get('/article-three',function(req,res){
+    
+    res.send("article three is requeseted and it will be served here.")
+    
+    
 });
 
 app.get('/ui/style.css', function (req, res) {
