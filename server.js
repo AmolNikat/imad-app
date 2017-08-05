@@ -17,6 +17,14 @@ app.get('/article-one',function(req,res){
     
 });
 
+var articleOne ={
+    title:'Article one and one',
+    heading:'ArticleOne',
+    date: '26 11 1992',
+    content:
+    
+};
+
 
 app.get('/article-two',function(req,res){
     
