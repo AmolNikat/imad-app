@@ -35,7 +35,7 @@ title = data.title;
 heading = data.heading;
 content= data.content;
 
-var htmltemplet =
+var htmltempete =
 `<html>
 <head>
     
