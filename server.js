@@ -28,7 +28,7 @@ var articleOne ={
     
 };
 
-function createTemplet(date){
+function createTemplet(data){
 
 date = data.date;
 title = data.title;
