@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
 
 app.get('/article-one',function(req,res){
     
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.send(createtemplete(articelOne));
     
     
 });
@@ -21,10 +21,69 @@ var articleOne ={
     title:'Article one and one',
     heading:'ArticleOne',
     date: '26 11 1992',
-    content:
+    content:`<p>
+            
+            this is the content for my first page.
+        </p>`
     
 };
 
+function createTemplet(date){
+
+date = data.date;
+title = data.title;
+heading = data.heading;
+content= data.content;
+
+var htmltemplet =
+`<html>
+<head>
+    
+    <title>
+    
+    ${title}
+        
+        
+    </title>
+    
+<meta name ="viewport" content ="width:device-width,initial-scale=1" />  
+
+ <link href="/ui/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    
+    
+    <div class="container">
+    <div>
+        
+        <a href ="/">Home</a>
+    </div>
+    <hr/>
+    
+    <h3> 
+    
+    ${heading}
+    
+    </h3>
+    
+    <div>
+        ${date}
+    </div>
+    
+    <div>
+        
+        ${content}
+    </div>
+    
+    </div>
+    
+</body>
+
+</html>`;
+    
+    return htmltempete;
+}
 
 app.get('/article-two',function(req,res){
     
