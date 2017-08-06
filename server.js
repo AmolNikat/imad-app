@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
 
 app.get('/article-one',function(req,res){
     
-    res.send(createtemplete(articelOne));
+    res.send(createTemplet(articelOne));
     
     
 });
